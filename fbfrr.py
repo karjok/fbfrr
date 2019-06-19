@@ -31,7 +31,7 @@ def login():
 		exit()
 	else:
 		print('[\033[91merror\033[0m] Login Error.')
-		exit():
+		exit()
 		
 
 def cekreq():
