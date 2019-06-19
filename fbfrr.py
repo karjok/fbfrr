@@ -25,10 +25,14 @@ def login():
 	r = s.post(basic+'/login',data=data)
 	if 'm_sess' in r.url or 'save-device' in r.url:
 		s.cookies.save()
-		print('[\033[96\033[0m] Login Success')
+		print('[\033[96msuccess\033[0m] Login Success')
+	elif 'checkpoint' in r.url:
+		print('[\033[93mcheckpoint\033[0m] Login checkpoint')
+		exit()
 	else:
-		print('[\033[91merror\033[0m] Login Error')
-		print(r.url)
+		print('[\033[91merror\033[0m] Login Error.')
+		exit():
+		
 
 def cekreq():
 	global strg
