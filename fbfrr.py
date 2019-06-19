@@ -46,6 +46,11 @@ def cekreq():
 	user = re.findall(r'>Keluar (.*?)<',profile)[0].replace('(','').replace(')','')
 	ftot = re.findall(r'>Teman (.*?)<',profile)[0].replace('(','').replace(')','')
 	freq = re.findall(r'>Teman(.*?)<',profile)[0].replace('(','').replace(')','')
+	if len(freq) == 0:
+		freq = "don't have"
+		banner(user,ftot,freq)
+		print("[\033[93mwarning\033[0m] You don't have friend requests to confirm or delete.\nthis tool only running if you have one or more friend requests.")
+		exit()
 
 	banner(user,ftot,freq)
 	print('''[\033[93mwarning\033[0m] this tool runs
