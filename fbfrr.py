@@ -128,6 +128,10 @@ def banner(u,ft,fr):
 ''')
 if __name__=='__main__':
 	try:
+		print('[\033[96minfo\033[0m] Updating..')
+		os.system('git pull')
+
+
 		cekreq()
 	except Exception as e:
 		ex = sys.exc_info()
